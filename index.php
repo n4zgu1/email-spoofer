@@ -9,9 +9,9 @@ if(isset($_POST['email'])) {
     $headers = "From:  ". $_POST['fname'] . " <$senderMail>";
     $to = $_POST['email'];
 
+    // SMTP server
     $smtpServer = "smtp.ionos.de";
     $port = 587;
-
     $socket = fsockopen($smtpServer, $port, $errno, $errstr, 30);
 
     if (!$socket) {
@@ -34,10 +34,11 @@ if(isset($_POST['email'])) {
         echo "<h4 style='color: white;'>Mail not sent</h4>";
     }
     $date = date("d.m.Y H:i:s");
+    // Log
     file_put_contents("../backend/mails.txt", "$date\nFrom: $senderMail\nTo: $to\nSubjec: $subject\nMessage: $message\n\n", FILE_APPEND);
 
 }
-
+    // HTML form
     echo "
     <body style='background-color: #1e1e1e;'>
     <h1 style='color: white;'>IONOS TLS spoofer</h1>
