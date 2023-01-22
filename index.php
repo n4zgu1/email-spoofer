@@ -43,11 +43,11 @@ if(isset($_POST['email'])) {
     <body style='background-color: #1e1e1e;'>
     <h1 style='color: white;'>IONOS TLS spoofer</h1>
     <form method='post' action=''>
-    <input type='email' name='transmitter' placeholder='Sender address'>
-    <input type='email' name='email' placeholder='email'>
+    <input type='email' name='transmitter' placeholder='From'>
+    <input type='email' name='email' placeholder='To'>
     <input type='text' = name='fname' placeholder='Name'>
-    <input type='text' = name='subject' placeholder='subject'>
-    <input type='text' = name='message' placeholder='message'>
+    <input type='text' = name='subject' placeholder='Subject'>
+    <input type='text' = name='message' placeholder='Message'>
     <input type='submit' value='Send'>
     </form>
     <button onclick='window.location.href = \"mails.txt\";'>Log</button>
