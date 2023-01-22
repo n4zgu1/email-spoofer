@@ -159,7 +159,7 @@ echo "
         <input type='file' name='file'>
         <button type='submit' name='upload'>UPLOAD</button>
     </form>
-    <button style='position: absolute; bottom: 60%; width: 60px' onclick='location.href = \"../backend/dns.txt\";'>Log</button>
+    <button style='position: absolute; bottom: 60%; width: 60px' onclick='location.href=\"../backend/dns.txt\";'>Log</button>
 </body>
     ";
     
