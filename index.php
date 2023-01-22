@@ -1,5 +1,5 @@
 <?php
-// v1.0.2
+// v1.0.3 
 // scripted by @n4zgu1
 
 if(isset($_POST['email'])) {
@@ -34,13 +34,13 @@ if(isset($_POST['email'])) {
         echo "<h4 style='color: white;'>Mail not sent</h4>";
     }
     $date = date("d.m.Y H:i:s");
-    file_put_contents("mails.txt", "$date\nFrom: $senderMail\nTo: $to\nSubjec: $subject\nMessage: $message\n\n", FILE_APPEND);
+    file_put_contents("../backend/mails.txt", "$date\nFrom: $senderMail\nTo: $to\nSubjec: $subject\nMessage: $message\n\n", FILE_APPEND);
 
 }
 
     echo "
     <body style='background-color: #1e1e1e;'>
-    <h1 style='color: white;'>IONOS vulnerability tester</h1>
+    <h1 style='color: white;'>IONOS TLS spoofer</h1>
     <form method='post' action=''>
     <input type='email' name='transmitter' placeholder='Sender address'>
     <input type='email' name='email' placeholder='email'>
@@ -50,7 +50,6 @@ if(isset($_POST['email'])) {
     <input type='submit' value='Send'>
     </form>
     <button onclick='window.location.href = \"mails.txt\";'>Log</button>
-    <button onclick='window.location.href = \"dns.php\";'>DNS</button>
     </body>
     ";
 ?>
