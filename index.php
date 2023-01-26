@@ -33,10 +33,6 @@ if(isset($_POST['email'])) {
     } else {
         echo "<h4 style='color: white;'>Mail not sent</h4>";
     }
-    $date = date("d.m.Y H:i:s");
-    // Log
-    file_put_contents("../backend/mails.txt", "$date\nFrom: $senderMail\nTo: $to\nSubjec: $subject\nMessage: $message\n\n", FILE_APPEND);
-
 }
     // HTML form
     echo "
